@@ -34,3 +34,9 @@ h2 {
 .current-project h4:first-child {
     margin-top: 90px;
 }
+
+.commitment {
+    font-family: Lato;
+    font-size: 16px;
+    color: #4b4b46;
+}
