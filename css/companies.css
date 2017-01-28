@@ -1,0 +1,36 @@
+.container-fluid {
+    width: 1050px;
+}
+.company-logo {
+    padding: 15px;
+    width: 175px;
+}
+#map {
+    height: 400px;
+    width: 100%;
+}
+.row {
+    margin-bottom: 30px;
+}
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.number-details {
+    text-align: center;
+}
+.number-details img {
+    margin-top: 30px;
+}
+.current-project p {
+    font-family: Lato;
+    line-height: 1.5em;
+    font-size: 18px;
+    color: #5e5e57;
+}
+.social-buttons {
+    text-align: center;
+}
+.current-project h4:first-child {
+    margin-top: 90px;
+}

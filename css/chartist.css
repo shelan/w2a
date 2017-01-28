@@ -1,0 +1,132 @@
+.pie {
+    position: absolute;
+    width: 100px;
+    height: 200px;
+    overflow: hidden;
+    left: 150px;
+    transform-origin: left center;
+}
+
+.pie.big {
+    width: 200px;
+    height: 200px;
+    left: 50px;
+    transform-origin: center center;
+}
+
+.pie:BEFORE {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 200px;
+    left: -100px;
+    border-radius: 100px 0 0 100px;
+    transform-origin: right center;
+
+}
+
+/* if it's part of a big piece, bring it back into the square */
+.pie.big:BEFORE {
+    left: 0px;
+}
+
+.pie.big:AFTER {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 200px;
+    left: 100px;
+    border-radius: 0 100px 100px 0;
+}
+
+.pie:nth-of-type(2):BEFORE,
+.pie:nth-of-type(2):AFTER {
+    background-color: #4bA44c;
+}
+
+.pie:nth-of-type(1):AFTER,
+.pie:nth-of-type(1):BEFORE {
+    background-color: darkgrey;
+}
+
+.pie:nth-of-type(3):AFTER,
+.pie:nth-of-type(3):BEFORE {
+    background-color: red;
+}
+
+.pie:nth-of-type(4):AFTER,
+.pie:nth-of-type(4):BEFORE {
+    background-color: orange;
+}
+
+/*
+  now rotate each piece based on their cumulative starting
+  position
+*/
+.pie[data-start="30"] {
+    transform: rotate(210deg);
+}
+
+.pie[data-start="60"] {
+    transform: rotate(60deg);
+}
+
+.pie[data-start="260"] {
+    transform: rotate(80deg);
+}
+
+/*
+  and rotate the amount of the pie that's showing.
+
+  NOTE: add an extra degree to all but the final piece, 
+  to fill in unsightly gaps.
+*/
+.pie[data-value="30"]:BEFORE {
+    transform: rotate(31deg);
+}
+
+.pie[data-value="40"]:BEFORE {
+    transform: rotate(41deg);
+}
+
+.pie[data-value="100"]:BEFORE {
+    transform: rotate(100deg);
+}
+.pie-wrapper {
+    left: -10px;
+    height: 210px;
+    width: 300px;
+    margin: 40px auto 20px;
+    position: relative;
+}
+.pie-wrapper:before {
+    width:150px;
+    height:150px;
+    content: " ";
+    top: 25px;
+    left: 75px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    z-index: 1;
+    line-height: 150px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+    color: #5e5e57;
+    font-family: Lato;
+}
+
+/*
+NOTE: you could also apply custom classes (i.e. .s0 .v30)
+but if the CSS3 attr() function proposal ever gets implemented,
+then all the above custom piece rules could be replaced with
+the following:
+
+.pie[data-start] {
+   transform:rotate(attr(data-start,deg,0);
+}
+.pie[data-value]:BEFORE {
+   transform:rotate(attr(data-value,deg,0);
+}
+*/

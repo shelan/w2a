@@ -4,11 +4,128 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="https://donorbox.org/widget.js" type="text/javascript"></script>
-    <iframe src="https://donorbox.org/embed/water-for-africa" height="685px" width="100%"
-            style="max-width:500px; min-width:310px" seamless="seamless" id="dbox-form-embed" name="donorbox"
-            frameborder="0" scrolling="no"></iframe>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/agency.css" rel="stylesheet">
+    <link href="../css/companies.css" rel="stylesheet">
+    <link href="../css/chartist.css" rel="stylesheet">
+    <link href="../css/Lato/latofonts.css" rel="stylesheet">
+    <style>.pie-wrapper:before {
+        content: "72%";
+    }</style>
 </head>
 <body>
+<nav id="mainNav" style="position: initial" class="navbar navbar-default navbar-custom navbar-fixed-top affix">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand page-scroll" href="../index.html">W2A</a>
+        </div>
+    </div>
+    <!-- /.navbar-collapse -->
+</nav>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-3"><img class="company-logo" src="../img/logo-seb.jpeg"></div>
+        <div class="col-xs-9">
+            <h1>SEB</h1>
+            <div class="ct-chart"></div>
+        </div>
+    </div>
 
+    <h2><b>Ongoing project:</b> Water to Maondo</h2>
+    <div class="current-project row">
+        <div class="col-xs-6">
+            <div class="current-project row">
+                <div class="col-xs-6">
+                    <div class="pie-wrapper">
+                        <div class="pie big" data-start="0" data-value="260"></div>
+                        <div class="pie big" data-start="260" data-value="100"></div>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <h4>Goal: 1,000,000</h4>
+                    <h4>Fundraised: 721,000</h4>
+                </div>
+            </div>
+            <p>
+                Maondo is a small village north of Daadab. It has 33 families, making a total of 170 people
+                that have to walk 9kms to the closest well.
+            </p>
+            <p>
+                Together with SEB you can help build a well in their village so that they can enjoy fresh water
+            </p>
+            <ul class="list-inline social-buttons">
+                <li><a href="#"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li><a href="#"><i class="fa fa-facebook"></i></a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-xs-6">
+            <p>For every 10kr you donate SEB will contribute 40kr more</p>
+            <div style="position: relative; overflow: hidden; height: 585px">
+                <!--<div style="position: absolute; height: 100px; top: 0; right: 0; background: white; width: 100%;">&nbsp;</div>-->
+                <iframe src="https://donorbox.org/embed/water-for-africa" height="685px" width="100%"
+                        style="position:absolute;top:-112px; max-width:500px; min-width:310px" seamless="seamless"
+                        id="dbox-form-embed" name="donorbox"
+                        frameborder="0" scrolling="no"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <h2><b>Contributed so far</b></h2>
+    <div class="row">
+        <div class="col-xs-6">
+            <div id="map">&nbsp;</div>
+            <script>
+                function initMap() {
+                    var uluru = {lat: -1.485108, lng: 39.136594};
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                        zoom: 6,
+                        center: {lat: -0.985108, lng: 39.136594}
+                    });
+                    var marker = new google.maps.Marker({
+                        position: uluru,
+                        map: map
+                    });
+                    var marker2 = new google.maps.Marker({
+                        position: {lat: 1.485108, lng: 39.136594},
+                        map: map
+                    });
+                    var marker3 = new google.maps.Marker({
+                        position: {lat: -0.463, lng: 37.044},
+                        map: map
+                    });
+                }
+            </script>
+        </div>
+        <div class="number-details col-xs-6">
+            <div>
+                <img width="56" src="../img/water3-48.png">
+                <h3>18,750</h3>
+                <h5>Liters of Water</h5>
+            </div>
+            <div>
+                <img width="56" src="../img/group2-48.png">
+                <h3>910</h3>
+                <h5>Non-thirsty People</h5>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOWPFbG5jRgU618py3fKdkWUiUFryeBSM&callback=initMap"
+        async defer></script>
 </body>
 </html>
