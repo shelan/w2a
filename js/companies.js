@@ -14,5 +14,12 @@ console.log('hola');
         $('#share-buttons').removeClass('hidden');
         $('#share-or-push').addClass('hidden');
     });
+    $('.back-to-b4').on('click', function(event) {
+        event.preventDefault();
+        $('#donorbox-wrapper-wrapper').addClass('hidden');
+        $('#share-buttons').addClass('hidden');
+        $('#share-or-push').removeClass('hidden');
+    });
+
 
 })(jQuery); // End of use strict
