@@ -291,9 +291,6 @@ section h3.section-subheading {
   font-weight: 400;
   margin-bottom: 25px;
 }
-section#portfolio h3.section-subheading {
-
-}
 @media (min-width: 768px) {
   section {
     padding: 150px 0;
