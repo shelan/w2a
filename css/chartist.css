@@ -75,6 +75,13 @@
     transform: rotate(80deg);
 }
 
+.pie[data-start="226"] {
+    transform: rotate(46deg);
+}
+.pie[data-start="324"] {
+    transform: rotate(144deg);
+}
+
 /*
   and rotate the amount of the pie that's showing.
 
@@ -91,6 +98,12 @@
 
 .pie[data-value="100"]:BEFORE {
     transform: rotate(100deg);
+}
+.pie[data-value="134"]:BEFORE {
+    transform: rotate(134deg);
+}
+.pie[data-value="36"]:BEFORE {
+    transform: rotate(36deg);
 }
 .pie-wrapper {
     left: -10px;
