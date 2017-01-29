@@ -68,19 +68,23 @@
             <p>
                 Together with SEB you can help build a well in their village so that they can enjoy fresh water
             </p>
-            <ul class="list-inline social-buttons">
-                <li><a href="#"><i class="fa fa-twitter"></i></a>
-                </li>
-                <li><a href="#"><i class="fa fa-facebook"></i></a>
-                </li>
-            </ul>
         </div>
-        <div class="col-xs-6">
-            <p>For every 10kr you donate SEB will contribute 40kr more</p>
-            <div class="donorbox-wrapper">
-                <!--<div style="position: absolute; height: 100px; top: 0; right: 0; background: white; width: 100%;">&nbsp;</div>-->
-                <iframe src="https://donorbox.org/embed/water-for-africa" height="685px" width="100%" name="donorbox"
-                        seamless="seamless" id="dbox-form-embed" frameborder="0" scrolling="no"></iframe>
+        <div class="share-or-push-wrap col-xs-6">
+            <div id="share-or-push">
+                <a class="btn btn-primary show-donor-box" href="#">Push</a>
+                <a class="btn btn-primary show-share-buttons" href="http://www.facebook.com">Share</a>
+            </div>
+            <div id="donorbox-wrapper-wrapper" class="hidden">
+                <p>For every 10kr you donate SEB will contribute 40kr more</p>
+                <div class="donorbox-wrapper">
+                    <!--<div style="position: absolute; height: 100px; top: 0; right: 0; background: white; width: 100%;">&nbsp;</div>-->
+                    <iframe src="https://donorbox.org/embed/water-for-africa" height="685px" width="100%" name="donorbox"
+                            seamless="seamless" id="dbox-form-embed" frameborder="0" scrolling="no"></iframe>
+                </div>
+            </div>
+            <div id="share-buttons" class="hidden">
+                <div class="social-button-wrap"><a href="#"><img src="../img/share-on-facebook.jpg"></a></div>
+                <div class="social-button-wrap"><a href="#"><img src="../img/share-on-twitter.jpg"></a></div>
             </div>
         </div>
     </div>
@@ -126,6 +130,8 @@
     </div>
 </div>
 
+<script src="../vendor/jquery/jquery.js" type="text/javascript"></script>
+<script src="../js/companies.js" type="text/javascript"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCOWPFbG5jRgU618py3fKdkWUiUFryeBSM&callback=initMap"
         async defer></script>
 </body>
